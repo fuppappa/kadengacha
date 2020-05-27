@@ -2,7 +2,7 @@ version: "3"
 services:
 
   uwsgi:
-    # ビルドするDockerfileのでディレクトリ相対パス
+    # ビルドするDockerfileのディレクトリ相対パス
     build: ./docker-image/flask
     # 指定したパスをコンテナにマウントする。"ホストのパス:コンテナのパス"となる
     volumes:
