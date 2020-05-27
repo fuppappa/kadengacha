@@ -2,12 +2,6 @@ from flask import request, redirect, url_for, render_template, flash
 from application import app, db
 from application.models import Product
 import random
-import time
-
-from PIL import Image
-import qrcode as qr
-import base64
-from io import BytesIO
 
 
 @app.route('/load1')
