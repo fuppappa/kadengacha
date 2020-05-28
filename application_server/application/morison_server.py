@@ -9,7 +9,7 @@ def load():
     return render_template("loading.html")
 
 
-@app.route('/test2')
+@app.route('/take', methods=["GET"])
 def test2():
     user_budget = request.args.get('budget')
     products = []
@@ -82,7 +82,7 @@ def show_entries():
     return render_template("index.html")
 
 
-@app.route('/take', methods=['GET'])
+@app.route('/take2', methods=['GET'])
 def add_entry():
     products = []
     message = "あなたの買うべき物を探しました！" + "\n" + "\n"

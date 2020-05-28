@@ -12,6 +12,8 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script data-ad-client="ca-pub-7835699171542570" async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <link rel="stylesheet" href="{{ url_for("static", filename="style.css") }}">
     <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
 
@@ -34,21 +36,16 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-            </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                <a class="nav-link dropdown-toggle" href="/" id="navbarDropdownMenuLink" role="button"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown link
+                    ガチャコース
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="/take?budget=10000">１万円コース</a>
+                    <a class="dropdown-item" href="/take?budget=30000">３万円コース</a>
+                    <a class="dropdown-item" href="/take?budget=50000">５万円コース</a>
+                    <a class="dropdown-item" href="/take?budget=100000">１０万円コース</a>
                 </div>
             </li>
         </ul>
@@ -70,13 +67,13 @@
                     予算を選んでね
                 </button>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="/test2?budget=10000">１万円：ちょびっと</a>
+                    <a class="dropdown-item" href="/take?budget=10000">１万円：ちょびっと</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/test2?budget=30000">３万円：もう少し</a>
+                    <a class="dropdown-item" href="/take?budget=30000">３万円：もう少し</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/test2?budget=50000">５万円：半分行っちゃおう！</a>
+                    <a class="dropdown-item" href="/take?budget=50000">５万円：半分行っちゃおう！</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/test2?budget=100000">１０万円：全部行っちゃう！</a>
+                    <a class="dropdown-item" href="/take?budget=100000">１０万円：全部行っちゃう！</a>
                 </div>
             </div>
         </div>
@@ -104,8 +101,9 @@
                     <h2>残金 {{ budget }}円</h2>
                 </div>
             {% endif %}
-
         </div>
+
+
         <p class="share_twitter_top"><a href="https://twitter.com/share?url=http://kadengacha.com&text=給付金で買うもの決めた！！">TwitterでURLをシェアする</a>
         </p>
         <p class="share_line"><a
@@ -113,8 +111,10 @@
         </p>
         <p class="share_instagram"><a href="https://share?url=http://kadengacha.com&text=給付金で買うもの決めた！！">Instagramで投稿</a>
         </p>
-
+        ※実際の価格と異なる場合があります<br>
+        ※Amazon非公式アプリです
     </div>
+
 </div>
 
 
