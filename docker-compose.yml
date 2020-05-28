@@ -3,7 +3,7 @@ services:
 
   uwsgi:
     # ビルドするDockerfileのディレクトリ相対パス
-    build: ./docker-image/flask
+    build: ./application_server
     # 指定したパスをコンテナにマウントする。"ホストのパス:コンテナのパス"となる
     volumes:
       - ./application_server:/var/www/
@@ -15,7 +15,7 @@ services:
       TZ: "Asia/Tokyo"
 
   nginx:
-    build: ./docker-image/nginx
+    build: ./nginx
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       # nginxのログをホストOSの /tmp/nginx_log に出力する
@@ -23,6 +23,6 @@ services:
     links:
       - uwsgi
     ports:
-      - "4231:80"
+      - "80:80"
     environment:
       TZ: "Asia/Tokyo"
